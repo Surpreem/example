@@ -1,0 +1,110 @@
+{
+  "environments": [
+    {
+      "BUILD_DIR": "${projectDir}\\build",
+      "INSTALL_DIR": "${projectDir}\\install"
+    }
+  ],
+  "configurations": [
+    {
+      "name": "x64-Debug",
+      "generator": "Visual Studio 15 2017 Win64",
+      "configurationType": "Debug",
+      "buildRoot": "${env.BUILD_DIR}\\${name}",
+      "installRoot": "${env.INSTALL_DIR}\\${name}",
+      "cmakeCommandArgs": "",
+      "buildCommandArgs": "-m -v:minimal",
+      "ctestCommandArgs": "",
+      "variables": []
+    },
+    {
+      "name": "x64-Release",
+      "generator": "Visual Studio 15 2017 Win64",
+      "configurationType": "Release",
+      "buildRoot": "${env.BUILD_DIR}\\${name}",
+      "installRoot": "${env.INSTALL_DIR}\\${name}",
+      "cmakeCommandArgs": "",
+      "buildCommandArgs": "-m -v:minimal",
+      "ctestCommandArgs": "",
+      "variables": []
+    },
+    {
+      "name": "x64-RelWithDebInfo",
+      "generator": "Visual Studio 15 2017 Win64",
+      "configurationType": "RelWithDebInfo",
+      "buildRoot": "${env.BUILD_DIR}\\${name}",
+      "installRoot": "${env.INSTALL_DIR}\\${name}",
+      "cmakeCommandArgs": "",
+      "buildCommandArgs": "-m -v:minimal",
+      "ctestCommandArgs": "",
+      "variables": []
+    },
+    {
+      "name": "x64-MinSizeRel",
+      "generator": "Visual Studio 15 2017 Win64",
+      "configurationType": "MinSizeRel",
+      "buildRoot": "${env.BUILD_DIR}\\${name}",
+      "installRoot": "${env.INSTALL_DIR}\\${name}",
+      "cmakeCommandArgs": "",
+      "buildCommandArgs": "-m -v:minimal",
+      "ctestCommandArgs": "",
+      "variables": []
+    },
+    {
+      "name": "Linux-Debug",
+      "generator": "Unix Makefiles",
+      "remoteMachineName": "${defaultRemoteMachineName}",
+      "configurationType": "Debug",
+      "remoteCMakeListsRoot": "/var/tmp/${workspaceHash}/src",
+      "cmakeExecutable": "/usr/bin/cmake",
+      "buildRoot": "${env.BUILD_DIR}\\${name}",
+      "installRoot": "${env.INSTALL_DIR}\\${name}",
+      "remoteBuildRoot": "/var/tmp/${workspaceHash}/build/${name}",
+      "remoteInstallRoot": "/var/tmp/${workspaceHash}/install/${name}",
+      "remoteCopySources": true,
+      "remoteCopySourcesOutputVerbosity": "Normal",
+      "remoteCopySourcesConcurrentCopies": "10",
+      "remoteCopySourcesMethod": "rsync",
+      "remoteCopySourcesExclusionList": [
+        ".vs",
+        ".git"
+      ],
+      "rsyncCommandArgs": "-t --delete --delete-excluded",
+      "remoteCopyBuildOutput": false,
+      "cmakeCommandArgs": "",
+      "buildCommandArgs": "",
+      "ctestCommandArgs": "",
+      "inheritEnvironments": [
+        "linux_x64"
+      ]
+    },
+    {
+      "name": "Linux-Release",
+      "generator": "Unix Makefiles",
+      "remoteMachineName": "${defaultRemoteMachineName}",
+      "configurationType": "RelWithDebInfo",
+      "remoteCMakeListsRoot": "/var/tmp/${workspaceHash}",
+      "cmakeExecutable": "/usr/bin/cmake",
+      "buildRoot": "${env.BUILD_DIR}\\${name}",
+      "installRoot": "${env.INSTALL_DIR}\\${name}",
+      "remoteBuildRoot": "/var/tmp/${workspaceHash}/build/${name}",
+      "remoteInstallRoot": "/var/tmp/${workspaceHash}/install/${name}",
+      "remoteCopySources": true,
+      "remoteCopySourcesOutputVerbosity": "Normal",
+      "remoteCopySourcesConcurrentCopies": "10",
+      "remoteCopySourcesMethod": "rsync",
+      "remoteCopySourcesExclusionList": [
+        ".vs",
+        ".git"
+      ],
+      "rsyncCommandArgs": "-t --delete --delete-excluded",
+      "remoteCopyBuildOutput": false,
+      "cmakeCommandArgs": "",
+      "buildCommandArgs": "",
+      "ctestCommandArgs": "",
+      "inheritEnvironments": [
+        "linux_x64"
+      ]
+    }
+  ]
+}
