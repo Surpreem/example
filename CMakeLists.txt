@@ -33,3 +33,4 @@ set(CMAKE_RUNTIME_OUTPUT_DIRECTORY "${BIN_ROOT}")
 set_property(GLOBAL PROPERTY USE_FOLDERS ON)
 
 add_subdirectory(function_call)
+add_subdirectory(fold_expression)
